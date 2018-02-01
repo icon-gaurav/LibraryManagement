@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" prefHeight="360.0" prefWidth="467.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Member Details" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Baskerville Old Face" size="39.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="141.0" prefWidth="252.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="290.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="100.0" prefWidth="300.0" text="Member ID" VBox.vgrow="ALWAYS" />
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="300.0" text="Name" VBox.vgrow="ALWAYS" />
+                  <Label layoutX="10.0" layoutY="27.0" prefHeight="100.0" prefWidth="300.0" text="College/Institute" VBox.vgrow="ALWAYS" />
+                  <Label layoutX="10.0" layoutY="44.0" prefHeight="100.0" prefWidth="300.0" text="email" VBox.vgrow="ALWAYS" />
+                  <Label text="Mobile No." />
+                  <Label text="Total Book Issued" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="150.0" prefWidth="14.0" />
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="181.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+                     <viewport>
+                        <Rectangle2D height="100.0" minX="100.0" minY="100.0" width="100.0" />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" text="OK" />
+            <Button mnemonicParsing="false" text="Edit" />
+            <Button mnemonicParsing="false" text="Cancel" />
+         </children>
+         <opaqueInsets>
+            <Insets right="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>

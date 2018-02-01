@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.fxmlfilescontroller.NewBook">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Book Details" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Century Schoolbook" size="30.0" />
+         </font>
+      </Label>
+      <ScrollPane>
+         <content>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="210.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Book ID" />
+                                    <TextField fx:id="BookId" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Book Name" />
+                                    <TextField fx:id="BookName" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Author" />
+                                    <TextField fx:id="Author" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Country" />
+                                    <TextField fx:id="authorCountry" promptText="Optional" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="D.O.B." />
+                                    <DatePicker fx:id="authorDob" promptText="Optional" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Publisher" />
+                                    <TextField fx:id="Publisher" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="70.0" spacing="10.0" VBox.vgrow="SOMETIMES">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Address" />
+                                    <TextArea fx:id="publisherAddress" prefHeight="200.0" prefWidth="200.0" promptText="Optional" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Publisher Date" />
+                                    <DatePicker fx:id="Pub_Date" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Price" />
+                                    <TextField fx:id="Price" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Category" />
+                                    <TextField fx:id="Category" prefHeight="25.0" prefWidth="131.0" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="No. of Books" />
+                                    <TextField fx:id="TotalBooks" HBox.hgrow="SOMETIMES" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" spacing="20.0">
+                           <children>
+                              <HBox alignment="CENTER" style="-fx-border-color: grey; -fx-border-radius: 15;">
+                                 <children>
+                                    <ImageView fx:id="FrontCoverView" fitHeight="204.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <Button mnemonicParsing="false" onAction="#uploadPicture" text="Upload Picture" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="status" prefHeight="17.0" prefWidth="437.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <children>
+            <Button fx:id="validate" mnemonicParsing="false" onAction="#validate" text="Validate" />
+            <Button fx:id="submit" mnemonicParsing="false" onAction="#submit" text="Submit" />
+            <Button mnemonicParsing="false" onAction="#reset" text="Reset" />
+            <Button fx:id="close" mnemonicParsing="false" onAction="#close" text="Close" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

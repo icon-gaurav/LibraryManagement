@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="workingWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/projectcontroller.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.fxmlfilescontroller.ProjectController">
+   <top>
+      <VBox>
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="_File">
+                  <items>
+                        <Menu mnemonicParsing="false" text="New">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#newMember" text="Member" />
+                              <MenuItem mnemonicParsing="false" onAction="#newUser" text="User" />
+                              <MenuItem mnemonicParsing="false" onAction="#newBook" text="Book" />
+                          </items>
+                        </Menu>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#issueBook" text="Issue Book" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Print" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_Edit">
+                  <items>
+                        <Menu mnemonicParsing="false" text="Update">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#updateMember" text="Member" />
+                              <MenuItem mnemonicParsing="false" onAction="#updateUser" text="User" />
+                              <MenuItem mnemonicParsing="false" onAction="#updateBook" text="Book" />
+                           </items>
+                        </Menu>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <Menu mnemonicParsing="false" text="Delete">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#deleteMember" text="Member" />
+                              <MenuItem mnemonicParsing="false" onAction="#deleteUser" text="User" />
+                              <MenuItem fx:id="deleteBook" mnemonicParsing="false" onAction="#deleteBook" text="Book" />
+                          </items>
+                        </Menu>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="_View">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="_Settings">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#settings" text="Theme" />
+                        <MenuItem mnemonicParsing="false" text="Text Color" />
+                        <MenuItem mnemonicParsing="false" text="Check for Update" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="_Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Welcome" />
+                        <MenuItem mnemonicParsing="false" text="Help Content" />
+                        <MenuItem mnemonicParsing="false" text="Search" />
+                        <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="41.0" style="-fx-background-color: #E9E9E9;" VBox.vgrow="NEVER">
+               <items>
+                  <Button fx:id="settings" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#settings" style="-fx-background-color: #E9E9E9;" styleClass="toolbar-button">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </Button>
+               </items></ToolBar>
+            <HBox fx:id="systemuser" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="userId" promptText="User ID">
+                     <effect>
+                        <DropShadow />
+                     </effect></TextField>
+                  <PasswordField fx:id="password" promptText="Password">
+                     <effect>
+                        <DropShadow />
+                     </effect></PasswordField>
+                <Button fx:id="login" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#login" text="Log In" />
+                  <Button alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#forgotPassword" text="Forgot Password" />
+                  <Button fx:id="logout" mnemonicParsing="false" onAction="#logout" text="Log Out" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox fx:id="leftmenu" prefHeight="509.0" prefWidth="179.0" spacing="7.0" styleClass="leftmenu">
+         <children>
+            <Button fx:id="memberDetails" alignment="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#allMemberDetails" styleClass="leftmenubutton" text="Member Details">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/all-member.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Separator VBox.vgrow="ALWAYS" />
+            <Button fx:id="bookDetails" alignment="CENTER" mnemonicParsing="false" onAction="#bookDetails" styleClass="leftmenubutton" text="Books Details">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/bookcase.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Separator />
+            <Button fx:id="bookIssue" alignment="CENTER" layoutX="10.0" layoutY="35.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#issueBook" styleClass="leftmenubutton" text="Issue Book">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/book-128%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Separator prefWidth="200.0" />
+            <Button fx:id="bookReturn" alignment="CENTER" layoutX="10.0" layoutY="60.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#returnBook" styleClass="leftmenubutton" text="Return Book" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons/return-book.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Separator prefWidth="200.0" />
+            <Button fx:id="bookSearch" alignment="CENTER" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#bookSearch" styleClass="leftmenubutton" text="Book Search" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../images/icons/gnome-searchtool.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic></Button>
+            <Separator prefWidth="200.0" />
+            <Button fx:id="memberSearch" alignment="CENTER" mnemonicParsing="false" onAction="#memberSearch" styleClass="leftmenubutton" text="Member Search">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../images/icons/Search-Male-User.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Separator prefWidth="200.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </left>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" prefHeight="10.0" prefWidth="390.0" text="Status" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="Batang" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="date_time" prefHeight="25.0" prefWidth="193.0" text="Date: Time" textAlignment="RIGHT" />
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" spacing="10.0">
+         <children>
+            <Text strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="0.0" text="Library Management System" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

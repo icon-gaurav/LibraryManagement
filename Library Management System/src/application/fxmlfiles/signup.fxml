@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="728.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.fxmlfilescontroller.NewMember">
+   <children>
+      <BorderPane layoutX="-143.0" layoutY="-152.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="30.0" layoutY="100.0" text="Member ID">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="140.0" text="First Name">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="180.0" text="Middle Name">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="220.0" text="Last Name">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="260.0" text="Gender">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="300.0" text="D.O.B.">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="300.0" text="Address">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="340.0" text="email id">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="380.0" text="Mobile no.">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="420.0" text="College/Institute">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="460.0" text="Branch/Course">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="500.0" text="Password">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="540.0" text="Confirm Password">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="Submit" layoutX="195.0" layoutY="656.0" mnemonicParsing="false" onAction="#submit" text="Submit">
+         <font>
+            <Font name="Copperplate Gothic Light" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="erase" layoutX="334.0" layoutY="656.0" mnemonicParsing="false" text="RESET">
+         <font>
+            <Font name="Copperplate Gothic Light" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="65.0" layoutY="656.0" mnemonicParsing="false" text="back">
+         <font>
+            <Font name="Copperplate Gothic Light" size="16.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="286.0" layoutY="22.0" text="Sign Up" textAlignment="CENTER">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="0.0" layoutY="76.0" prefHeight="12.0" prefWidth="712.0" />
+      <TextField fx:id="memberid" layoutX="200.0" layoutY="100.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField id="firstname" fx:id="fname" layoutX="200.0" layoutY="140.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField id="middlename" fx:id="mname" layoutX="200.0" layoutY="180.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField id="lastname" fx:id="lname" layoutX="200.0" layoutY="220.0" prefHeight="25.0" prefWidth="180.0" />
+      <TextField id="email" fx:id="email" layoutX="200.0" layoutY="340.0" prefHeight="25.0" prefWidth="180.0" />
+      <DatePicker id="dateofbirth" fx:id="dob" layoutX="107.0" layoutY="298.0" prefHeight="25.0" prefWidth="129.0" />
+      <ChoiceBox id="gender" fx:id="gender" layoutX="200.0" layoutY="260.0" prefWidth="150.0" />
+      <TextField id="mobile_no" fx:id="mobileno" layoutX="200.0" layoutY="380.0" prefWidth="180.0" />
+      <ChoiceBox id="branch" fx:id="branch" layoutX="250.0" layoutY="458.0" prefWidth="150.0" />
+      <ChoiceBox id="college" fx:id="college" layoutX="250.0" layoutY="418.0" prefWidth="150.0" />
+      <PasswordField id="password" fx:id="password" layoutX="250.0" layoutY="498.0" prefWidth="180.0" />
+      <PasswordField id="cnfpassword" fx:id="confirmPassword" layoutX="250.0" layoutY="538.0" prefWidth="180.0" />
+      <Label fx:id="status" layoutX="40.0" layoutY="592.0" prefHeight="28.0" prefWidth="378.0" />
+      <TextField fx:id="address" layoutX="375.0" layoutY="297.0" prefHeight="26.0" prefWidth="111.0" />
+      <ImageView fx:id="profilePicture" fitHeight="192.0" fitWidth="180.0" layoutX="470.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow color="#756767" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

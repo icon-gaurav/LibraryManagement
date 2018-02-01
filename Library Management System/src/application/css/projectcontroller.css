@@ -1,0 +1,21 @@
+#systemuser{
+	-fx-border-color :yellow;
+}
+.leftmenu{
+}
+.leftmenubutton{
+	-fx-background-color:rgb(0,255,64);
+}
+.leftmenubutton:hover{
+	-fx-background-color:rgb(128,255,128);
+}
+#welcomelabel{
+	-fx-background-color:linear-gradient( from 0.0% 0.0% to 100.0% 100.0%, reflect, rgb(255,255,77) 0.0, rgb(153,0,0) 100.0)
+}
+#window{
+	-fx-background-image:url('/wallup-123739.jpg');
+}
+.toolbar-button:hover{
+	-fx-border-color:rgb(192,192,192);
+	-fx-border-radius:5px;
+}
